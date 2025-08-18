@@ -19,7 +19,7 @@
                             </div>
                             <li>
                                 <h1 class="text-2xl">
-                                    <strong>{{ $task->title }}</strong> - Due: {{ $task->due_date }}
+                                    <strong>{{ $task->title }}</strong> - Due: {{ $task->reminder_time }}
                                 </h1>
                                 <p class="text-gray-600">
                                     {{ $task->description }}

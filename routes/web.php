@@ -35,10 +35,13 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/testroute', function() {
-    $name = "Funny Coder";
-
+$mailDetails = [
+                'name' => "Stranger",
+                'title' => "Task Reminder",
+                'reminder_time' => "2023-08-01 10:00:00"
+            ];
     // The email sending is done using the to method on the Mail facade
-    Mail::to('prashanthero13@gmail.com')->send(new MyTestEmail($name));
+    Mail::to('prashanthero13@gmail.com')->send(new MyTestEmail($mailDetails));
 });
 
 require __DIR__.'/auth.php';

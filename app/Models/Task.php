@@ -8,4 +8,10 @@ class  Task  extends  Model
   protected $fillable = [
     'title', 'description', 'due_date', 'email', 'reminder_time', 'last_notification_date'
   ];
+
+
+  public function user()
+  {
+    return $this->belongsTo(User::class, 'email', 'email');
+  }
 }

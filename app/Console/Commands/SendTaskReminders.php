@@ -30,16 +30,21 @@ class SendTaskReminders extends Command
     public  function  handle()
     {
         $now = Carbon::now();
-        $upcomingTasks = Task::where('last_notification_date', null)->get();
  
         $upcomingTasks = Task::where('last_notification_date', null)
  
         ->where('reminder_time', '>=', $now->clone()->subMinutes(10))
  
         ->get();
- 
+    //  ->whereBetween('reminder_time', [$now, $now->clone()->addMinutes(10)])
+
         foreach ($upcomingTasks as $task) {
-              Mail::to($task->email)->send(new MyTestEmail("Stranger"));
+            $mailDetails = [
+                'name' => $task->user->name,
+                'title' => $task->title,
+                'reminder_time' => $task->reminder_time
+            ];
+              Mail::to($task->email)->send(new MyTestEmail($mailDetails));
             // $emailBody = <<<EOF
             //   Hello,
             //   This is a reminder for your task:

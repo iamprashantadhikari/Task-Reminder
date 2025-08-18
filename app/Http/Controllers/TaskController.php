@@ -71,8 +71,8 @@ class TaskController extends Controller
         $task = Task::findOrFail($id);
         $data = $request->all();
  
-        $data['due_date'] = Carbon::parse($request->due_date)->format('Y-m-d H:i:s');
-        $data['reminder_time'] = Carbon::parse($request->reminder_time)->format('Y-m-d H:i:s');
+        $data['due_date'] = Carbon::parse($request->due_date);
+        $data['reminder_time'] = Carbon::parse($request->reminder_time);
         $task->update($data);
  
         return redirect()->route('tasks.index')->with('success', 'Task updated successfully.');
