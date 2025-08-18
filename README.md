@@ -1,14 +1,14 @@
 # 📝 Task Reminder
 
-A simple yet powerful **Task Reminder application** built with **Laravel** to help you stay organized and never miss an important task! Set reminders, track your tasks, and boost your productivity—all in one place.  
+A simple yet powerful **Task Reminder application** built with **Laravel** to help you stay organized and never miss an important task! Set reminders, track your tasks, and boost your productivity all in one place.  
 
 ---
 
 ## 🚀 Features
 
+- **Login / Authentication:** Secure login system for users. 
 - **Add Tasks:** Create tasks with due dates and descriptions.  
 - **Task Notifications:** Get notified about upcoming tasks.  
-- **Task Status:** Mark tasks as complete or pending.  
 - **Task Filtering:** View tasks by status or due date.  
 - **User-Friendly Interface:** Clean, intuitive, and responsive design.  
 
@@ -16,11 +16,11 @@ A simple yet powerful **Task Reminder application** built with **Laravel** to he
 
 ## 🛠 Technology Stack
 
-- **Framework:** Laravel 10  
-- **Database:** MySQL / SQLite  
+- **Framework:** Laravel 12  
+- **Database:** Mangodb  
 - **Frontend:** Blade Templates, Bootstrap / TailwindCSS  
 - **Authentication:** Laravel Breeze / Sanctum (optional)  
-- **Notifications:** Laravel Mail / Queue / Mailtrap  
+- **Notifications:** Laravel Mail / Mailtrap  
 
 ---
 
@@ -29,7 +29,7 @@ A simple yet powerful **Task Reminder application** built with **Laravel** to he
 1. **Clone the repository**  
 
 ```bash
-git clone https://github.com/your-username/task-reminder.git
+git clone https://github.com/iamprashantadhikari/Task-Reminder.git
 cd task-reminder
 ```
 
@@ -84,3 +84,29 @@ MAIL_ENCRYPTION=null
 3. Receive email notifications for pending tasks.
 
 4. Mark tasks as complete when done.
+
+
+## 🧑‍💻 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository  
+2. Create a new branch  
+
+```bash
+git checkout -b feature/your-feature
+```
+
+3. Commit your changes  
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to the branch  
+
+```bash
+git push origin feature/your-feature
+```
+
+5. Open a Pull Request
