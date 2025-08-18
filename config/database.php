@@ -31,6 +31,12 @@ return [
 
     'connections' => [
 
+         'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('MONGODB_URI'),
+            'database' => 'Cluster0',
+        ],
+        
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
