@@ -59,6 +59,7 @@ php artisan migrate
 ```bash
 php artisan serve
 ```
+---
 
 ## 📬 Notifications (Optional)
 To test email notifications locally, you can use Mailtrap:
@@ -76,6 +77,8 @@ MAIL_PASSWORD=your_password
 MAIL_ENCRYPTION=null
 ```
 
+---
+
 ## ⚡ Usage
 1. Add a task with a title, description, and due date.
 
@@ -85,6 +88,7 @@ MAIL_ENCRYPTION=null
 
 4. Mark tasks as complete when done.
 
+---
 
 ## 🧑‍💻 Contributing
 
